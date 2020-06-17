@@ -35,7 +35,7 @@ public class Map {
         SimpleDateFormat sdf = new SimpleDateFormat("dd MM yyyy");
         Date max = radars.stream().max(Comparator.comparing(Radar::getDate)).get().getDate();
         return Optional.of(Feature.createBall(town.getName() + " " + radars.size() + " avisos\n Ultimo aviso: " + sdf.format(max),
-                town.getLon(), town.getLat(), radars.size()));
+                town.getLon() + 0.0001D, town.getLat() + 0.0001D, radars.size()));
     }
 
     private static List<Radar> getNumberAtMinDistance(Town town, Collection<List<Radar>> radars) {
