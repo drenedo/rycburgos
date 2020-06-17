@@ -1,5 +1,3 @@
-# phone-spam project
-
 This project uses Quarkus framework. Modules: Jackson, Panache and Postgresql
 
 ## Running the application in dev mode
